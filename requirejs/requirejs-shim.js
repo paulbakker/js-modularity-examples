@@ -1,8 +1,8 @@
 
     require.config({
       paths: {
-        'angular': 'AssessmentPlayerConfig',
-        'jquery': './lib/jquery-1.9.1',
+        'angular': '/ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js',
+        'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
       },
 
       //  Tune dependencies of non-AMD scripts
@@ -14,4 +14,9 @@
       }
     });
 
-    
+
+    require(['angular'], function(ng) {
+      ng.module('MyAngularApp').service(...)
+    });
+
+
